@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "bike",
+    "description": "Bike Inventory"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "model": {
+      "default": "",
+      "type": "string"
+    },
+    "rate": {
+      "default": "",
+      "type": "integer"
+    },
+    "status": {
+      "default": "",
+      "type": "enumeration",
+      "enum": [
+        "Available",
+        "Taken",
+        "Broken"
+      ]
+    },
+    "orders": {
+      "collection": "order",
+      "via": "bikes"
+    }
+  }
+}

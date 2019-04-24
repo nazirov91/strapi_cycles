@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "order",
+    "description": "Rental orders"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "rental_time": {
+      "default": "",
+      "type": "date"
+    },
+    "rental_due": {
+      "default": "",
+      "type": "date"
+    },
+    "cost": {
+      "default": "",
+      "type": "integer"
+    },
+    "user": {
+      "model": "user",
+      "via": "orders",
+      "plugin": "users-permissions"
+    },
+    "bikes": {
+      "collection": "bike",
+      "via": "orders",
+      "dominant": true
+    }
+  }
+}

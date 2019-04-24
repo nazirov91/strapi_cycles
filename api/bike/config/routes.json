@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bikes",
+      "handler": "Bike.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bikes/count",
+      "handler": "Bike.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bikes/:_id",
+      "handler": "Bike.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bikes",
+      "handler": "Bike.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bikes/:_id",
+      "handler": "Bike.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bikes/:_id",
+      "handler": "Bike.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
